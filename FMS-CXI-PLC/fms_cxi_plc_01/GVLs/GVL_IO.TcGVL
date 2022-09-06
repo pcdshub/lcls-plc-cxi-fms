@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_IO" Id="{5dd485cf-eead-4faf-93bb-688f95275a65}">
+    <Declaration><![CDATA[// PLC IO from terminal modules
+{attribute 'qualified_only'}
+VAR_GLOBAL
+
+	(* Slot1 EL3208-0010 *)
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3208-0010]^RTD Inputs Channel 1^Value'}
+	nTempMonRaw01 AT %I* : INT; // Ch1
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3208-0010]^RTD Inputs Channel 2^Value'}
+	nTempMonRaw02 AT %I* : INT; // Ch2
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3208-0010]^RTD Inputs Channel 3^Value'}
+	nTempMonRaw03 AT %I* : INT; // Ch3
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3208-0010]^RTD Inputs Channel 4^Value'}
+	nTempMonRaw04 AT %I* : INT; // Ch4
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3208-0010]^RTD Inputs Channel 5^Value'}
+	nPCWTempRaw01 AT %I* : INT; // Ch5
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3208-0010]^RTD Inputs Channel 6^Value'}
+	nPCWTempRaw02 AT %I* : INT; // Ch6
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3208-0010]^RTD Inputs Channel 7^Value'}
+	nPCWTempRaw03 AT %I* : INT; // Ch7
+    
+	
+	(* Slot 2 EL3174 *)
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL3174]^AI Standard Channel 1^Value'}
+	nPCWFlowRaw01 AT %I* : INT; // Ch1 0-20mA Extended Range (0-30518)
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL3174]^AI Standard Channel 2^Value'}
+	nPCWFlowRaw02 AT %I* : INT; // Ch2 0-20mA Extended Range (0-30518)
+    
+	(* Slot 3 EL1004*)
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E03_EL1004]^Channel 1^Input'}
+    bLeak01 AT %I* : BOOL; // Ch1
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E03_EL1004]^Channel 2^Input'}
+    bLeak02 AT %I* : BOOL; // Ch2
+	{attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E0x_EL1004]^Channel 3^Input'}
+    bLeak03 AT %I* : BOOL; // Ch3
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E0x_EL1004]^Channel 4^Input'}
+    bLeak04 AT %I* : BOOL; // Ch4
+    
+    (* Slot 4 EL1004*)
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E0x_EL1004]^Channel 1^Input'}
+    bLeak05 AT %I* : BOOL; // Ch1
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E0x_EL1004]^Channel 2^Input'}
+    bLeak06 AT %I* : BOOL; // Ch2
+	{attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E0x_EL1004]^Channel 3^Input'}
+    bLeak07 AT %I* : BOOL; // Ch3
+
+	
+	
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
