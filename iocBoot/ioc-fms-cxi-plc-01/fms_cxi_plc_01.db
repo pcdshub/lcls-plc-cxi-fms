@@ -1,0 +1,191 @@
+record(bi, "$(PREFIX):LEAK01_RBV") {
+  field(DESC, "GVL_IO.bLeak01")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_IO.bLeak01?")
+  field(ZNAM, "OK")
+  field(ONAM, "LEAK")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX):LEAK02_RBV") {
+  field(DESC, "GVL_IO.bLeak02")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_IO.bLeak02?")
+  field(ZNAM, "OK")
+  field(ONAM, "LEAK")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX):LEAK03_RBV") {
+  field(DESC, "GVL_IO.bLeak03")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_IO.bLeak03?")
+  field(ZNAM, "OK")
+  field(ONAM, "LEAK")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX):LEAK04_RBV") {
+  field(DESC, "GVL_IO.bLeak04")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_IO.bLeak04?")
+  field(ZNAM, "OK")
+  field(ONAM, "LEAK")
+  info(archive, "VAL")
+}
+
+record(ai, "$(PREFIX):PCW:FLOW01:FLOWRATE_RBV") {
+  field(DESC, "MAIN.fbPCWFlow01.fFlow")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbPCWFlow01.fFlow?")
+  field(PREC, "3")
+  field(EGU, "L/MIN")
+  field(HOPR, "30")
+  field(LOPR, "0.0")
+  field(LSV, "MINOR")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ai, "$(PREFIX):PCW:FLOW02:FLOWRATE_RBV") {
+  field(DESC, "MAIN.fbPCWFlow02.fFlow")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbPCWFlow02.fFlow?")
+  field(PREC, "3")
+  field(EGU, "L/MIN")
+  field(HOPR, "30")
+  field(LOPR, "0.0")
+  field(LSV, "MINOR")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ai, "$(PREFIX):MON:TEMP01:TEMP_RBV") {
+  field(DESC, "MAIN.fbTempMon01.fTemperature")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbTempMon01.fTemperature?")
+  field(PREC, "3")
+  field(EGU, "C")
+  field(HOPR, "1000")
+  field(LOPR, "0.0")
+  field(LSV, "MINOR")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ai, "$(PREFIX):MON:TEMP02:TEMP_RBV") {
+  field(DESC, "MAIN.fbTempMon02.fTemperature")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbTempMon02.fTemperature?")
+  field(PREC, "3")
+  field(EGU, "C")
+  field(HOPR, "1000")
+  field(LOPR, "0.0")
+  field(LSV, "MINOR")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ai, "$(PREFIX):MON:TEMP03:TEMP_RBV") {
+  field(DESC, "MAIN.fbTempMon03.fTemperature")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbTempMon03.fTemperature?")
+  field(PREC, "3")
+  field(EGU, "C")
+  field(HOPR, "1000")
+  field(LOPR, "0.0")
+  field(LSV, "MINOR")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ai, "$(PREFIX):MON:TEMP04:TEMP_RBV") {
+  field(DESC, "MAIN.fbTempMon04.fTemperature")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbTempMon04.fTemperature?")
+  field(PREC, "3")
+  field(EGU, "C")
+  field(HOPR, "1000")
+  field(LOPR, "0.0")
+  field(LSV, "MINOR")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ai, "$(PREFIX):PCW:TEMP01:TEMP_RBV") {
+  field(DESC, "MAIN.fbPCWTemp01.fTemperature")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbPCWTemp01.fTemperature?")
+  field(PREC, "3")
+  field(EGU, "C")
+  field(HOPR, "1000")
+  field(LOPR, "0.0")
+  field(LSV, "MINOR")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ai, "$(PREFIX):PCW:TEMP02:TEMP_RBV") {
+  field(DESC, "MAIN.fbPCWTemp02.fTemperature")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbPCWTemp02.fTemperature?")
+  field(PREC, "3")
+  field(EGU, "C")
+  field(HOPR, "1000")
+  field(LOPR, "0.0")
+  field(LSV, "MINOR")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ai, "$(PREFIX):PCW:TEMP03:TEMP_RBV") {
+  field(DESC, "MAIN.fbPCWTemp03.fTemperature")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbPCWTemp03.fTemperature?")
+  field(PREC, "3")
+  field(EGU, "C")
+  field(HOPR, "1000")
+  field(LOPR, "0.0")
+  field(LSV, "MINOR")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
