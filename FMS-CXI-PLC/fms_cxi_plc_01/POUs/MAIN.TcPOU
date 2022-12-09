@@ -41,8 +41,6 @@ by the function blocks into stErrors.
 fbPCWTemp01(
 	nTempMonRaw := GVL_IO.nPCWTempRaw01
 );
-
-(*
 (* Monitors PCW temperature from sensor 2 *)
 fbPCWTemp02(
 	nTempMonRaw := GVL_IO.nPCWTempRaw02
@@ -51,19 +49,15 @@ fbPCWTemp02(
 fbPCWTemp03(
 	nTempMonRaw := GVL_IO.nPCWTempRaw03
 );
-*)
 
 (* Monitors temperature from RTD sensor 1 *)
 fbTempMon01(
 	nTempMonRaw := GVL_IO.nTempMonRaw01
 );
-
-(*
 (* Monitors temperature from RTD sensor 2 *)
 fbTempMon02(
 	nTempMonRaw := GVL_IO.nTempMonRaw02
 );
-
 (* Monitors temperature from RTD sensor 3 *)
 fbTempMon03(
 	nTempMonRaw := GVL_IO.nTempMonRaw03
@@ -72,13 +66,11 @@ fbTempMon03(
 fbTempMon04(
 	nTempMonRaw := GVL_IO.nTempMonRaw04
 );
-*)
 
 (* Monitors flow rate from Keyence sensor 1 *)
 fbPCWFlow01(
 	nPCWFlowRaw := GVL_IO.nPCWFlowRaw01
 );
-
 (* Monitors flow rate from Keyence sensor 2 *)
 fbPCWFlow02(
 	nPCWFlowRaw := GVL_IO.nPCWFlowRaw02

@@ -5,99 +5,106 @@
 {attribute 'qualified_only'}
 VAR_GLOBAL
 
-	(* Slot1 EL3202-0010 *)
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3202-0010]^RTD Inputs Channel 1^Value'}
-	nTempMonRaw01 AT %I* : INT; // Ch1
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3202-0010]^RTD Inputs Channel 2^Value'}
-	nPCWTempRaw01 AT %I* : INT; // Ch2	
-
-    //nTempMonRaw02 AT %I* : INT; // Ch2
+    (* Slot 1 EL9184*)
     
-    (*
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3208-0010]^RTD Inputs Channel 3^Value'}
-	nTempMonRaw03 AT %I* : INT; // Ch3
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3208-0010]^RTD Inputs Channel 4^Value'}
-	nTempMonRaw04 AT %I* : INT; // Ch4
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3208-0010]^RTD Inputs Channel 5^Value'}
-	nPCWTempRaw01 AT %I* : INT; // Ch5
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3208-0010]^RTD Inputs Channel 6^Value'}
-	nPCWTempRaw02 AT %I* : INT; // Ch6
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E01_EL3208-0010]^RTD Inputs Channel 7^Value'}
-	nPCWTempRaw03 AT %I* : INT; // Ch7
-    *)
-    
-	
-	(* Slot 2 EL3174-0002 *)
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL3174-0002]^AI Standard Channel 1^Value'}
-	nPCWFlowRaw01 AT %I* : INT; // Ch1 0-20mA Extended Range (0-30518)
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL3174-0002]^AI Standard Channel 2^Value'}
-	nPCWFlowRaw02 AT %I* : INT; // Ch2 0-20mA Extended Range (0-30518)
-    
-	(* Slot 3 EL1004*)
+    (* Slot 2 EL1008*)
     {attribute 'pytmc' := '
 		pv: @(PREFIX):LEAK01
 		io: i
-		field: ZNAM "OK"
-		field: ONAM "LEAK"
+		field: ZNAM "LEAK"
+		field: ONAM "OK"
 	'}
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E03_EL1004]^Channel 1^Input'}
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL1008]^Channel 1^Input'}
     bLeak01 AT %I* : BOOL; // Ch1
+   
     {attribute 'pytmc' := '
 		pv: @(PREFIX):LEAK02
 		io: i
-		field: ZNAM "OK"
-		field: ONAM "LEAK"
+		field: ZNAM "LEAK"
+		field: ONAM "OK"
 	'}
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E03_EL1004]^Channel 2^Input'}
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL1008]^Channel 2^Input'}
     bLeak02 AT %I* : BOOL; // Ch2
+    
     {attribute 'pytmc' := '
 		pv: @(PREFIX):LEAK03
 		io: i
-		field: ZNAM "OK"
-		field: ONAM "LEAK"
+		field: ZNAM "LEAK"
+		field: ONAM "OK"
 	'}
-	{attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E03_EL1004]^Channel 3^Input'}
+	{attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL1008]^Channel 3^Input'}
     bLeak03 AT %I* : BOOL; // Ch3
+    
     {attribute 'pytmc' := '
 		pv: @(PREFIX):LEAK04
 		io: i
-		field: ZNAM "OK"
-		field: ONAM "LEAK"
+		field: ZNAM "LEAK"
+		field: ONAM "OK"
 	'}
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E03_EL1004]^Channel 4^Input'}
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL1004]^Channel 4^Input'}
     bLeak04 AT %I* : BOOL; // Ch4
-    
-    (*
-    (* Slot 4 EL1004*)
+
     {attribute 'pytmc' := '
 		pv: @(PREFIX):LEAK05
 		io: i
-		field: ZNAM "OK"
-		field: ONAM "LEAK"
+		field: ZNAM "LEAK"
+		field: ONAM "OK"
 	'}
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E0x_EL1004]^Channel 1^Input'}
-    bLeak05 AT %I* : BOOL; // Ch1
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL1008]^Channel 5^Input'}
+    bLeak05 AT %I* : BOOL; // Ch5
+    
     {attribute 'pytmc' := '
 		pv: @(PREFIX):LEAK06
 		io: i
-		field: ZNAM "OK"
-		field: ONAM "LEAK"
+		field: ZNAM "LEAK"
+		field: ONAM "OK"
 	'}
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E0x_EL1004]^Channel 2^Input'}
-    bLeak06 AT %I* : BOOL; // Ch2
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL1008]^Channel 6^Input'}
+    bLeak06 AT %I* : BOOL; // Ch6
+    
     {attribute 'pytmc' := '
 		pv: @(PREFIX):LEAK07
 		io: i
-		field: ZNAM "OK"
-		field: ONAM "LEAK"
+		field: ZNAM "LEAK"
+		field: ONAM "OK"
 	'}
-	{attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E0x_EL1004]^Channel 3^Input'}
-    bLeak07 AT %I* : BOOL; // Ch3
-    *)
+	{attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E03_EL1008]^Channel 7^Input'}
+    bLeak07 AT %I* : BOOL; // Ch7
+    
+    (* Slot 3 EL9184*)
+    
+	(* Slot4 EL3202-0010 *)
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E04_EL3202-0010]^RTD Inputs Channel 1^Value'}
+	nPCWTempRaw01 AT %I* : INT; // Ch1
+    
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E04_EL3208-0010]^RTD Inputs Channel 2^Value'}
+	nPCWTempRaw02 AT %I* : INT; // Ch2
+    
+    (* Slot5 EL3202-0010 *)
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E05_EL3208-0010]^RTD Inputs Channel 1^Value'}
+	nPCWTempRaw03 AT %I* : INT; // Ch1
 
+    (* Slot6 EL3202-0010 *)
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E06_EL3202-0010]^RTD Inputs Channel 1^Value'}
+    nTempMonRaw01 AT %I* : INT; // Ch1
+    
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E06_EL3208-0010]^RTD Inputs Channel 2^Value'}
+    nTempMonRaw02 AT %I* : INT; // Ch2
+    
+    (* Slot7 EL3202-0010 *)
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E07_EL3208-0010]^RTD Inputs Channel 1^Value'}
+	nTempMonRaw03 AT %I* : INT; // Ch1
+    
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E07_EL3208-0010]^RTD Inputs Channel 2^Value'}
+	nTempMonRaw04 AT %I* : INT; // Ch2
 	
-	
-	
+	(* Slot 8 EL3174-0002 *)
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E08_EL3174-0002]^AI Standard Channel 1^Value'}
+	nPCWFlowRaw01 AT %I* : INT; // Ch1 0-20mA Extended Range (0-30518)
+    
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E08_EL3174-0002]^AI Standard Channel 2^Value'}
+	nPCWFlowRaw02 AT %I* : INT; // Ch2 0-20mA Extended Range (0-30518)
+    
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
