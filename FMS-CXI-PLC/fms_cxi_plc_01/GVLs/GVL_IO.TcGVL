@@ -41,7 +41,7 @@ VAR_GLOBAL
 		field: ZNAM "LEAK"
 		field: ONAM "OK"
 	'}
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL1004]^Channel 4^Input'}
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL1008]^Channel 4^Input'}
     bLeak04 AT %I* : BOOL; // Ch4
 
     {attribute 'pytmc' := '
@@ -68,7 +68,7 @@ VAR_GLOBAL
 		field: ZNAM "LEAK"
 		field: ONAM "OK"
 	'}
-	{attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E03_EL1008]^Channel 7^Input'}
+	{attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E02_EL1008]^Channel 7^Input'}
     bLeak07 AT %I* : BOOL; // Ch7
     
     (* Slot 3 EL9184*)
@@ -77,25 +77,25 @@ VAR_GLOBAL
     {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E04_EL3202-0010]^RTD Inputs Channel 1^Value'}
 	nPCWTempRaw01 AT %I* : INT; // Ch1
     
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E04_EL3208-0010]^RTD Inputs Channel 2^Value'}
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E04_EL3202-0010]^RTD Inputs Channel 2^Value'}
 	nPCWTempRaw02 AT %I* : INT; // Ch2
     
     (* Slot5 EL3202-0010 *)
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E05_EL3208-0010]^RTD Inputs Channel 1^Value'}
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E05_EL3202-0010]^RTD Inputs Channel 1^Value'}
 	nPCWTempRaw03 AT %I* : INT; // Ch1
 
     (* Slot6 EL3202-0010 *)
     {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E06_EL3202-0010]^RTD Inputs Channel 1^Value'}
     nTempMonRaw01 AT %I* : INT; // Ch1
     
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E06_EL3208-0010]^RTD Inputs Channel 2^Value'}
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E06_EL3202-0010]^RTD Inputs Channel 2^Value'}
     nTempMonRaw02 AT %I* : INT; // Ch2
     
     (* Slot7 EL3202-0010 *)
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E07_EL3208-0010]^RTD Inputs Channel 1^Value'}
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E07_EL3202-0010]^RTD Inputs Channel 1^Value'}
 	nTempMonRaw03 AT %I* : INT; // Ch1
     
-    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E07_EL3208-0010]^RTD Inputs Channel 2^Value'}
+    {attribute 'TcLinkTo' := 'TIIB[FMS_PLC_E07_EL3202-0010]^RTD Inputs Channel 2^Value'}
 	nTempMonRaw04 AT %I* : INT; // Ch2
 	
 	(* Slot 8 EL3174-0002 *)

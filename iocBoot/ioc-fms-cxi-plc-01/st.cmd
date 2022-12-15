@@ -1,31 +1,51 @@
-#!c:/Repos/ads-ioc/R0.5.0///bin/rhel7-x86_64/adsIoc
-###### AUTO-GENERATED DO NOT EDIT ##############
-
+#!c:/Repos/ads-ioc/R0.6.0///bin/rhel7-x86_64/adsIoc
+################### AUTO-GENERATED DO NOT EDIT ###################
+#
+#         Project: FMS_CXI_PLC.tsproj
+#        PLC name: fms_cxi_plc_01 (fms_cxi_plc_01 Instance)
+# Generated using: pytmc 2.14.1+0.g20d35b3.dirty
+# Project version: unknown
+#    Project hash: unknown
+#     PLC IP/host: 172.21.69.80
+#      PLC Net ID: 172.21.69.80.1.1
+# ** DEVELOPMENT MODE IOC **
+# * Using IOC boot directory for autosave.
+# * Archiver settings will not be configured.
+#
+# Libraries:
+#
+#   Tc2_BABasic: * -> * (Beckhoff Automation GmbH)
+#   Tc2_EtherCAT: * (Beckhoff Automation GmbH)
+#   Tc2_Standard: * (Beckhoff Automation GmbH)
+#   Tc2_System: * (Beckhoff Automation GmbH)
+#   Tc3_Module: * (Beckhoff Automation GmbH)
+#
+################### AUTO-GENERATED DO NOT EDIT ###################
 < envPaths
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
-epicsEnvSet("ENGINEER", "payers" )
+epicsEnvSet("ENGINEER", "" )
 epicsEnvSet("LOCATION", "PLC:fms_cxi_plc_01" )
 epicsEnvSet("IOCSH_PS1", "$(IOC)> " )
 epicsEnvSet("ACF_FILE", "$(ADS_IOC_TOP)/iocBoot/templates/unrestricted.acf")
-
-# Run common startup commands for linux soft IOC's
-< /reg/d/iocCommon/All/pre_linux.cmd
 
 # Register all support components
 dbLoadDatabase("$(ADS_IOC_TOP)/dbd/adsIoc.dbd")
 adsIoc_registerRecordDeviceDriver(pdbbase)
 
 epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
-epicsEnvSet("IPADDR",           "172.21.148.24")
-epicsEnvSet("AMSID",            "172.21.148.24.1.1")
+epicsEnvSet("IPADDR",           "172.21.69.80")
+epicsEnvSet("AMSID",            "172.21.69.80.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "10000")
+epicsEnvSet("ADS_MAX_PARAMS",   "1016")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
 epicsEnvSet("ADS_TIME_SOURCE",  "0")
+
+# Add a route to the PLC automatically:
+system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.69.80 ^172.*$")
 
 # adsAsynPortDriverConfigure(portName, ipaddr, amsaddr, amsport,
 #    asynParamTableSize, priority, noAutoConnect, defaultSampleTimeMS,
@@ -57,34 +77,48 @@ cd "$(ADS_IOC_TOP)/db"
 
 dbLoadRecords("iocSoft.db", "IOC=PLC:fms_cxi_plc_01")
 dbLoadRecords("save_restoreStatus.db", "P=PLC:fms_cxi_plc_01:")
-dbLoadRecords("caPutLog.db", "IOC=${IOC}")
+dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 
-## TwinCat System Databse files ##
-dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=ASYN_PLC, PREFIX=PLC:fms_cxi_plc_01")
-dbLoadRecords("TwinCAT_AppInfo.db", "PORT=ASYN_PLC, PREFIX=PLC:fms_cxi_plc_01")
+## TwinCAT task, application, and project information databases ##
+dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:fms_cxi_plc_01,IDX=1")
+dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:fms_cxi_plc_01")
+
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:fms_cxi_plc_01,PROJECT=FMS_CXI_PLC.tsproj,HASH=unknown,VERSION=unknown,PYTMC=2.14.1+0.g20d35b3.dirty,PLC_HOST=172.21.69.80")
+
+#   Tc2_BABasic: * -> * (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:fms_cxi_plc_01,DEPENDENCY=Tc2_BABasic,VERSION=*,VENDOR=Beckhoff Automation GmbH")
+#   Tc2_EtherCAT: * (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:fms_cxi_plc_01,DEPENDENCY=Tc2_EtherCAT,VERSION=*,VENDOR=Beckhoff Automation GmbH")
+#   Tc2_Standard: * (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:fms_cxi_plc_01,DEPENDENCY=Tc2_Standard,VERSION=*,VENDOR=Beckhoff Automation GmbH")
+#   Tc2_System: * (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:fms_cxi_plc_01,DEPENDENCY=Tc2_System,VERSION=*,VENDOR=Beckhoff Automation GmbH")
+#   Tc3_Module: * (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:fms_cxi_plc_01,DEPENDENCY=Tc3_Module,VERSION=*,VENDOR=Beckhoff Automation GmbH")
 
 cd "$(IOC_TOP)"
 
-## Database files ##
-< "$(IOC_TOP)/load_plc_databases.cmd"
+## PLC Project Database files ##
+dbLoadRecords("fms_cxi_plc_01.db", "PORT=$(ASYN_PORT),PREFIX=PLC:fms_cxi_plc_01:,IOCNAME=$(IOC),IOC=$(IOC)")
 
+# Total records: 16
+callbackSetQueueSize(2032)
 
-# Setup autosave
-set_savefile_path( "$(IOC_DATA)/$(IOC)/autosave" )
-set_requestfile_path( "$(IOC_TOP)/autosave" )
+# Autosave and archive settings:
+save_restoreSet_status_prefix("PLC:fms_cxi_plc_01:")
+save_restoreSet_IncompleteSetsOk(1)
+save_restoreSet_DatedBackupFiles(1)
+set_pass0_restoreFile("info_positions.sav")
+set_pass1_restoreFile("info_settings.sav")
 
-save_restoreSet_status_prefix( "PLC:fms_cxi_plc_01:" )
-save_restoreSet_IncompleteSetsOk( 1 )
-save_restoreSet_DatedBackupFiles( 1 )
-set_pass0_restoreFile( "info_positions.sav" )
-set_pass1_restoreFile( "info_settings.sav" )
+# ** Development IOC Settings **
+# Development IOC autosave and archive files go in the IOC top directory:
+cd "$(IOC_TOP)"
 
-cd "$(IOC_TOP)/autosave"
+# (Development mode) Create info_positions.req and info_settings.req
 makeAutosaveFiles()
-cd "$(IOC_TOP)"
-
-# Create the archiver file
-makeArchiveFromDbInfo("$(IOC_DATA)/$(IOC)/archive/$(IOC).archive", "archive")
+# (Development mode) Create the archiver file
+makeArchiveFromDbInfo("$(IOC).archive", "archive")
 
 # Configure access security: this is required for caPutLog.
 asSetFilename("$(ACF_FILE)")
@@ -96,7 +130,7 @@ iocInit()
 iocLogInit()
 
 # Configure and start the caPutLogger after iocInit
-epicsEnvSet(EPICS_AS_PUT_LOG_PV, "${IOC}:caPutLog:Last")
+epicsEnvSet(EPICS_AS_PUT_LOG_PV, "$(IOC):caPutLog:Last")
 
 # caPutLogInit("HOST:PORT", config)
 # config options:
@@ -104,11 +138,9 @@ epicsEnvSet(EPICS_AS_PUT_LOG_PV, "${IOC}:caPutLog:Last")
 #       caPutLogOnChange    0: log only on value change
 #       caPutLogAll         1: log all puts
 #       caPutLogAllNoFilter 2: log all puts no filtering on same PV
-caPutLogInit("${EPICS_CAPUTLOG_HOST}:${EPICS_CAPUTLOG_PORT}", 0)
+caPutLogInit("$(EPICS_CAPUTLOG_HOST):$(EPICS_CAPUTLOG_PORT)", 0)
 
 # Start autosave backups
 create_monitor_set( "info_positions.req", 10, "" )
 create_monitor_set( "info_settings.req", 60, "" )
 
-# All IOCs should dump some common info after initial startup.
-< /reg/d/iocCommon/All/post_linux.cmd
