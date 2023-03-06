@@ -2,23 +2,23 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="MAIN" Id="{22851f5b-0e0c-47e0-846b-7dde516783da}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
-VAR   
+VAR
     //PCW flow monitors
     {attribute 'pytmc' := 'pv: @(PREFIX):PCW:FLOW01'}
     fbPCWFlow01 : FB_PCWFlow; //PCW flow monitor 01
     {attribute 'pytmc' := 'pv: @(PREFIX):PCW:FLOW02'}
     fbPCWFlow02 : FB_PCWFlow; //PCW flow monitor 02
-    
+
     // Gross temperature monitors (PT-1000)
-	{attribute 'pytmc' := 'pv: @(PREFIX):MON:TEMP01'}
-	fbTempMon01 : FB_TemperatureMonitor; // System temperature monitor 01
+    {attribute 'pytmc' := 'pv: @(PREFIX):MON:TEMP01'}
+    fbTempMon01 : FB_TemperatureMonitor; // System temperature monitor 01
     {attribute 'pytmc' := 'pv: @(PREFIX):MON:TEMP02'}
-	fbTempMon02 : FB_TemperatureMonitor; // System temperature monitor 02
+    fbTempMon02 : FB_TemperatureMonitor; // System temperature monitor 02
     {attribute 'pytmc' := 'pv: @(PREFIX):MON:TEMP03'}
-	fbTempMon03 : FB_TemperatureMonitor; // System temperature monitor 03
+    fbTempMon03 : FB_TemperatureMonitor; // System temperature monitor 03
     {attribute 'pytmc' := 'pv: @(PREFIX):MON:TEMP04'}
-	fbTempMon04 : FB_TemperatureMonitor; // System temperature monitor 04
-    
+    fbTempMon04 : FB_TemperatureMonitor; // System temperature monitor 04
+
     //PCW temperature monitors (PT-1000)
     {attribute 'pytmc' := 'pv: @(PREFIX):PCW:TEMP01'}
     fbPCWTemp01 : FB_TemperatureMonitor; //PCW temp monitor 01
@@ -31,7 +31,7 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-(******************************************************************* 
+(*******************************************************************
 Feed each device function block inputs from the PLC IO. Collect error states detected
 by the function blocks into stErrors.
 *******************************************************************)
@@ -39,41 +39,41 @@ by the function blocks into stErrors.
 
 (* Monitors PCW temperature from sensor 1 *)
 fbPCWTemp01(
-	nTempMonRaw := GVL_IO.nPCWTempRaw01
+    nTempMonRaw := GVL_IO.nPCWTempRaw01
 );
 (* Monitors PCW temperature from sensor 2 *)
 fbPCWTemp02(
-	nTempMonRaw := GVL_IO.nPCWTempRaw02
+    nTempMonRaw := GVL_IO.nPCWTempRaw02
 );
 (* Monitors PCW temperature from sensor 3 *)
 fbPCWTemp03(
-	nTempMonRaw := GVL_IO.nPCWTempRaw03
+    nTempMonRaw := GVL_IO.nPCWTempRaw03
 );
 
 (* Monitors temperature from RTD sensor 1 *)
 fbTempMon01(
-	nTempMonRaw := GVL_IO.nTempMonRaw01
+    nTempMonRaw := GVL_IO.nTempMonRaw01
 );
 (* Monitors temperature from RTD sensor 2 *)
 fbTempMon02(
-	nTempMonRaw := GVL_IO.nTempMonRaw02
+    nTempMonRaw := GVL_IO.nTempMonRaw02
 );
 (* Monitors temperature from RTD sensor 3 *)
 fbTempMon03(
-	nTempMonRaw := GVL_IO.nTempMonRaw03
+    nTempMonRaw := GVL_IO.nTempMonRaw03
 );
 (* Monitors temperature from RTD sensor 4 *)
 fbTempMon04(
-	nTempMonRaw := GVL_IO.nTempMonRaw04
+    nTempMonRaw := GVL_IO.nTempMonRaw04
 );
 
 (* Monitors flow rate from Keyence sensor 1 *)
 fbPCWFlow01(
-	nPCWFlowRaw := GVL_IO.nPCWFlowRaw01
+    nPCWFlowRaw := GVL_IO.nPCWFlowRaw01
 );
 (* Monitors flow rate from Keyence sensor 2 *)
 fbPCWFlow02(
-	nPCWFlowRaw := GVL_IO.nPCWFlowRaw02
+    nPCWFlowRaw := GVL_IO.nPCWFlowRaw02
 );
 
 
