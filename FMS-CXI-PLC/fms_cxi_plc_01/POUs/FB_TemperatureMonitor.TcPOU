@@ -4,18 +4,18 @@
     <Declaration><![CDATA[// Monitors temperature sensors
 FUNCTION_BLOCK FB_TemperatureMonitor
 VAR_INPUT
-	nTempMonRaw : INT; // Raw signal from the ADC
+    nTempMonRaw : INT; // Raw signal from the ADC
 END_VAR
 VAR_OUTPUT
-	{attribute 'pytmc' := '
-		pv: TEMP
-		io: i
-		field: EGU C
-		field: LOPR 0.0
-		field: HOPR 1000
-		field: LSV MINOR
-	'}
-	fTemperature : LREAL; // Temperature reading in celsius
+    {attribute 'pytmc' := '
+        pv: TEMP
+        io: i
+        field: EGU C
+        field: LOPR 0.0
+        field: HOPR 1000
+        field: LSV MINOR
+    '}
+    fTemperature : LREAL; // Temperature reading in celsius
 END_VAR
 ]]></Declaration>
     <Implementation>

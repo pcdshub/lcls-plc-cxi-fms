@@ -4,24 +4,24 @@
     <Declaration><![CDATA[// Monitors temperature sensors
 FUNCTION_BLOCK FB_PCWFlow
 VAR_INPUT
-	nPCWFlowRaw : INT; // Raw signal from the ADC
+    nPCWFlowRaw : INT; // Raw signal from the ADC
 END_VAR
 VAR_OUTPUT
-	{attribute 'pytmc' := '
-		pv: FLOWRATE
-		io: i
-		field: EGU L/MIN
-		field: LOPR 0.0
-		field: HOPR 300
-		field: LSV MINOR
-	'}
-	fFlow : LREAL; // Flow reading in L/min (0-30)
+    {attribute 'pytmc' := '
+        pv: FLOWRATE
+        io: i
+        field: EGU L/MIN
+        field: LOPR 0.0
+        field: HOPR 300
+        field: LSV MINOR
+    '}
+    fFlow : LREAL; // Flow reading in L/min (0-30)
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[//Scale the raw hex value to the flowrate set in the Keyence (0-20ma -> 0-30L/min)
 fFlow := (INT_TO_LREAL(nPCWFlowRaw)/(GVL_EL3174.fRawUpperLimit - GVL_EL3174.fRawLowerLimit)) * GVL_EL3174.fScaleUpperLimit;
 
-	]]></ST>
+    ]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
