@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{F25ACDF0-9529-F5BB-ED20-71F14ED4E6BF}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{10B29051-6EF6-C6F2-302D-98BCC5F45E41}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name GUID="{6F5942ED-BFA1-497D-8225-23C6DAAD0A09}" TcBaseType="true">ST_LibVersion</Name>
@@ -42,11 +42,11 @@
       </SubItem>
     </DataType>
     <DataType>
-      <Name>FB_TemperatureMonitor</Name>
+      <Name>FB_PCWFlow</Name>
       <Comment> Monitors temperature sensors</Comment>
       <BitSize>192</BitSize>
       <SubItem>
-        <Name>nTempMonRaw</Name>
+        <Name>nPCWFlowRaw</Name>
         <Type>INT</Type>
         <Comment> Raw signal from the ADC</Comment>
         <BitSize>16</BitSize>
@@ -59,9 +59,9 @@
         </Properties>
       </SubItem>
       <SubItem>
-        <Name>fTemperature</Name>
+        <Name>fFlow</Name>
         <Type>LREAL</Type>
-        <Comment> Temperature reading in celsius</Comment>
+        <Comment> Flow reading in L/min (0-30)</Comment>
         <BitSize>64</BitSize>
         <BitOffs>128</BitOffs>
         <Properties>
@@ -72,13 +72,13 @@
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: TEMP
-		io: i
-		field: EGU C
-		field: LOPR 0.0
-		field: HOPR 1000
-		field: LSV MINOR
-	</Value>
+        pv: FLOWRATE
+        io: i
+        field: EGU L/MIN
+        field: LOPR 0.0
+        field: HOPR 300
+        field: LSV MINOR
+    </Value>
           </Property>
         </Properties>
       </SubItem>
@@ -556,11 +556,11 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name>FB_PCWFlow</Name>
+      <Name>FB_TemperatureMonitor</Name>
       <Comment> Monitors temperature sensors</Comment>
       <BitSize>192</BitSize>
       <SubItem>
-        <Name>nPCWFlowRaw</Name>
+        <Name>nTempMonRaw</Name>
         <Type>INT</Type>
         <Comment> Raw signal from the ADC</Comment>
         <BitSize>16</BitSize>
@@ -573,9 +573,9 @@
         </Properties>
       </SubItem>
       <SubItem>
-        <Name>fFlow</Name>
+        <Name>fTemperature</Name>
         <Type>LREAL</Type>
-        <Comment> Flow reading in L/min (0-30)</Comment>
+        <Comment> Temperature reading in celsius</Comment>
         <BitSize>64</BitSize>
         <BitOffs>128</BitOffs>
         <Properties>
@@ -586,13 +586,13 @@
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: FLOWRATE
-		io: i
-		field: EGU L/MIN
-		field: LOPR 0.0
-		field: HOPR 300
-		field: LSV MINOR
-	</Value>
+        pv: TEMP
+        io: i
+        field: EGU C
+        field: LOPR 0.0
+        field: HOPR 1000
+        field: LSV MINOR
+    </Value>
           </Property>
         </Properties>
       </SubItem>
@@ -639,11 +639,11 @@
               <Property>
                 <Name>pytmc</Name>
                 <Value>
-		pv: @(PREFIX):LEAK01
-		io: i
-		field: ZNAM "LEAK"
-		field: ONAM "OK"
-	</Value>
+        pv: @(PREFIX):LEAK01
+        io: i
+        field: ZNAM "LEAK"
+        field: ONAM "OK"
+    </Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -668,11 +668,11 @@
               <Property>
                 <Name>pytmc</Name>
                 <Value>
-		pv: @(PREFIX):LEAK02
-		io: i
-		field: ZNAM "LEAK"
-		field: ONAM "OK"
-	</Value>
+        pv: @(PREFIX):LEAK02
+        io: i
+        field: ZNAM "LEAK"
+        field: ONAM "OK"
+    </Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -697,11 +697,11 @@
               <Property>
                 <Name>pytmc</Name>
                 <Value>
-		pv: @(PREFIX):LEAK03
-		io: i
-		field: ZNAM "LEAK"
-		field: ONAM "OK"
-	</Value>
+        pv: @(PREFIX):LEAK03
+        io: i
+        field: ZNAM "LEAK"
+        field: ONAM "OK"
+    </Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -726,11 +726,11 @@
               <Property>
                 <Name>pytmc</Name>
                 <Value>
-		pv: @(PREFIX):LEAK04
-		io: i
-		field: ZNAM "LEAK"
-		field: ONAM "OK"
-	</Value>
+        pv: @(PREFIX):LEAK04
+        io: i
+        field: ZNAM "LEAK"
+        field: ONAM "OK"
+    </Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -755,11 +755,11 @@
               <Property>
                 <Name>pytmc</Name>
                 <Value>
-		pv: @(PREFIX):LEAK05
-		io: i
-		field: ZNAM "LEAK"
-		field: ONAM "OK"
-	</Value>
+        pv: @(PREFIX):LEAK05
+        io: i
+        field: ZNAM "LEAK"
+        field: ONAM "OK"
+    </Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -784,11 +784,11 @@
               <Property>
                 <Name>pytmc</Name>
                 <Value>
-		pv: @(PREFIX):LEAK06
-		io: i
-		field: ZNAM "LEAK"
-		field: ONAM "OK"
-	</Value>
+        pv: @(PREFIX):LEAK06
+        io: i
+        field: ZNAM "LEAK"
+        field: ONAM "OK"
+    </Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -813,11 +813,11 @@
               <Property>
                 <Name>pytmc</Name>
                 <Value>
-		pv: @(PREFIX):LEAK07
-		io: i
-		field: ZNAM "LEAK"
-		field: ONAM "OK"
-	</Value>
+        pv: @(PREFIX):LEAK07
+        io: i
+        field: ZNAM "LEAK"
+        field: ONAM "OK"
+    </Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -1252,95 +1252,30 @@
             <BitOffs>4097824</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fbTempMon01</Name>
-            <Comment> System temperature monitor 01</Comment>
+            <Name>MAIN.fbPCWFlow01</Name>
+            <Comment>PCW flow monitor 01</Comment>
             <BitSize>192</BitSize>
-            <BaseType>FB_TemperatureMonitor</BaseType>
+            <BaseType>FB_PCWFlow</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
-                <Value>pv: @(PREFIX):MON:TEMP01</Value>
+                <Value>pv: @(PREFIX):PCW:FLOW01</Value>
               </Property>
             </Properties>
-            <BitOffs>4105856</BitOffs>
+            <BitOffs>4105472</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fbTempMon02</Name>
-            <Comment> System temperature monitor 02</Comment>
+            <Name>MAIN.fbPCWFlow02</Name>
+            <Comment>PCW flow monitor 02</Comment>
             <BitSize>192</BitSize>
-            <BaseType>FB_TemperatureMonitor</BaseType>
+            <BaseType>FB_PCWFlow</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
-                <Value>pv: @(PREFIX):MON:TEMP02</Value>
+                <Value>pv: @(PREFIX):PCW:FLOW02</Value>
               </Property>
             </Properties>
-            <BitOffs>4106048</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fbTempMon03</Name>
-            <Comment> System temperature monitor 03</Comment>
-            <BitSize>192</BitSize>
-            <BaseType>FB_TemperatureMonitor</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>pv: @(PREFIX):MON:TEMP03</Value>
-              </Property>
-            </Properties>
-            <BitOffs>4106240</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fbTempMon04</Name>
-            <Comment> System temperature monitor 04</Comment>
-            <BitSize>192</BitSize>
-            <BaseType>FB_TemperatureMonitor</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>pv: @(PREFIX):MON:TEMP04</Value>
-              </Property>
-            </Properties>
-            <BitOffs>4106432</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fbPCWTemp01</Name>
-            <Comment>PCW temp monitor 01</Comment>
-            <BitSize>192</BitSize>
-            <BaseType>FB_TemperatureMonitor</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>pv: @(PREFIX):PCW:TEMP01</Value>
-              </Property>
-            </Properties>
-            <BitOffs>4106624</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fbPCWTemp02</Name>
-            <Comment>PCW temp monitor 02</Comment>
-            <BitSize>192</BitSize>
-            <BaseType>FB_TemperatureMonitor</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>pv: @(PREFIX):PCW:TEMP02</Value>
-              </Property>
-            </Properties>
-            <BitOffs>4106816</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fbPCWTemp03</Name>
-            <Comment>PCW temp monitor 03</Comment>
-            <BitSize>192</BitSize>
-            <BaseType>FB_TemperatureMonitor</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>pv: @(PREFIX):PCW:TEMP03</Value>
-              </Property>
-            </Properties>
-            <BitOffs>4107008</BitOffs>
+            <BitOffs>4105664</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bLittleEndian</Name>
@@ -1715,30 +1650,95 @@
             <BitOffs>4112064</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fbPCWFlow01</Name>
-            <Comment>PCW flow monitor 01</Comment>
+            <Name>MAIN.fbTempMon01</Name>
+            <Comment> System temperature monitor 01</Comment>
             <BitSize>192</BitSize>
-            <BaseType>FB_PCWFlow</BaseType>
+            <BaseType>FB_TemperatureMonitor</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
-                <Value>pv: @(PREFIX):PCW:FLOW01</Value>
+                <Value>pv: @(PREFIX):MON:TEMP01</Value>
               </Property>
             </Properties>
-            <BitOffs>4574912</BitOffs>
+            <BitOffs>4225664</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fbPCWFlow02</Name>
-            <Comment>PCW flow monitor 02</Comment>
+            <Name>MAIN.fbTempMon02</Name>
+            <Comment> System temperature monitor 02</Comment>
             <BitSize>192</BitSize>
-            <BaseType>FB_PCWFlow</BaseType>
+            <BaseType>FB_TemperatureMonitor</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
-                <Value>pv: @(PREFIX):PCW:FLOW02</Value>
+                <Value>pv: @(PREFIX):MON:TEMP02</Value>
               </Property>
             </Properties>
-            <BitOffs>4575104</BitOffs>
+            <BitOffs>4225856</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MAIN.fbTempMon03</Name>
+            <Comment> System temperature monitor 03</Comment>
+            <BitSize>192</BitSize>
+            <BaseType>FB_TemperatureMonitor</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: @(PREFIX):MON:TEMP03</Value>
+              </Property>
+            </Properties>
+            <BitOffs>4226048</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MAIN.fbTempMon04</Name>
+            <Comment> System temperature monitor 04</Comment>
+            <BitSize>192</BitSize>
+            <BaseType>FB_TemperatureMonitor</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: @(PREFIX):MON:TEMP04</Value>
+              </Property>
+            </Properties>
+            <BitOffs>4226240</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MAIN.fbPCWTemp01</Name>
+            <Comment>PCW temp monitor 01</Comment>
+            <BitSize>192</BitSize>
+            <BaseType>FB_TemperatureMonitor</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: @(PREFIX):PCW:TEMP01</Value>
+              </Property>
+            </Properties>
+            <BitOffs>4226432</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MAIN.fbPCWTemp02</Name>
+            <Comment>PCW temp monitor 02</Comment>
+            <BitSize>192</BitSize>
+            <BaseType>FB_TemperatureMonitor</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: @(PREFIX):PCW:TEMP02</Value>
+              </Property>
+            </Properties>
+            <BitOffs>4226624</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MAIN.fbPCWTemp03</Name>
+            <Comment>PCW temp monitor 03</Comment>
+            <BitSize>192</BitSize>
+            <BaseType>FB_TemperatureMonitor</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: @(PREFIX):PCW:TEMP03</Value>
+              </Property>
+            </Properties>
+            <BitOffs>4226816</BitOffs>
           </Symbol>
         </DataArea>
       </DataAreas>
@@ -1751,7 +1751,7 @@
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2023-03-03T16:46:35</Value>
+          <Value>2023-03-06T13:46:49</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
