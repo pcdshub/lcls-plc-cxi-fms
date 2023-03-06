@@ -12,6 +12,11 @@
     <Implicit_KindOfTask>{1daae416-eb8f-4daf-a3e2-4eb2548889a6}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{6d821663-5b61-4026-83c5-08025786c854}</Implicit_Jitter_Distribution>
     <LibraryReferences>{87951284-d758-42b6-970f-b6cc3ea24e3e}</LibraryReferences>
+    <CombineIds>false</CombineIds>
+    <Company>SLAC</Company>
+    <Released>true</Released>
+    <Title>fms-cxi-plc-01</Title>
+    <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GVLs\GVL_EL3174.TcGVL">
