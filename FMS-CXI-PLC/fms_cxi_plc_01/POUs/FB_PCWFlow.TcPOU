@@ -12,7 +12,7 @@ VAR_OUTPUT
 		io: i
 		field: EGU L/MIN
 		field: LOPR 0.0
-		field: HOPR 30
+		field: HOPR 300
 		field: LSV MINOR
 	'}
 	fFlow : LREAL; // Flow reading in L/min (0-30)

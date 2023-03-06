@@ -6,7 +6,7 @@ VAR_GLOBAL CONSTANT
 	(* Analog scaling *)
 	fRawUpperLimit : LREAL := 16#7736; // Highest raw signal that can be read
 	fRawLowerLimit : LREAL := 16#0000; // Lowest raw signal that can be read
-	fScaleUpperLimit : LREAL := 30.0; // Upper limit in L/min
+	fScaleUpperLimit : LREAL := 300.0; // Upper limit in L/min
 	fScaleLowerLimit : LREAL := 0.0; // Lower limit in L/min
 END_VAR]]></Declaration>
   </GVL>
