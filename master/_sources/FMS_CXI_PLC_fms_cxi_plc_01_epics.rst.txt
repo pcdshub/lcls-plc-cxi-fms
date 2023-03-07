@@ -1,0 +1,208 @@
+
+Data Types
+----------
+
+
+  
+FB_PCWFlow
+^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):FLOWRATE_RBV
+      - ai
+      - $(SYMBOL).fFlow
+      - | field: EGU L/MIN
+        | field: HOPR 300
+        | field: LOPR 0.0
+        | field: LSV MINOR
+        | io: input
+
+
+ 
+FB_TemperatureMonitor
+^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):TEMP_RBV
+      - ai
+      - $(SYMBOL).fTemperature
+      - | field: EGU C
+        | field: HOPR 1000
+        | field: LOPR 0.0
+        | field: LSV MINOR
+        | io: input
+
+
+      
+Database Records
+----------------
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):LEAK01_RBV
+      - bi
+      - GVL_IO.bLeak01
+      - | field: ONAM "OK"
+        | field: ZNAM "LEAK"
+        | io: input
+
+
+    * - $(PREFIX):LEAK02_RBV
+      - bi
+      - GVL_IO.bLeak02
+      - | field: ONAM "OK"
+        | field: ZNAM "LEAK"
+        | io: input
+
+
+    * - $(PREFIX):LEAK03_RBV
+      - bi
+      - GVL_IO.bLeak03
+      - | field: ONAM "OK"
+        | field: ZNAM "LEAK"
+        | io: input
+
+
+    * - $(PREFIX):LEAK04_RBV
+      - bi
+      - GVL_IO.bLeak04
+      - | field: ONAM "OK"
+        | field: ZNAM "LEAK"
+        | io: input
+
+
+    * - $(PREFIX):LEAK05_RBV
+      - bi
+      - GVL_IO.bLeak05
+      - | field: ONAM "OK"
+        | field: ZNAM "LEAK"
+        | io: input
+
+
+    * - $(PREFIX):LEAK06_RBV
+      - bi
+      - GVL_IO.bLeak06
+      - | field: ONAM "OK"
+        | field: ZNAM "LEAK"
+        | io: input
+
+
+    * - $(PREFIX):LEAK07_RBV
+      - bi
+      - GVL_IO.bLeak07
+      - | field: ONAM "OK"
+        | field: ZNAM "LEAK"
+        | io: input
+
+
+    * - $(PREFIX):PCW:FLOW01:FLOWRATE_RBV
+      - ai
+      - MAIN.fbPCWFlow01.fFlow
+      - | field: EGU L/MIN
+        | field: HOPR 300
+        | field: LOPR 0.0
+        | field: LSV MINOR
+        | io: input
+
+
+    * - $(PREFIX):PCW:FLOW02:FLOWRATE_RBV
+      - ai
+      - MAIN.fbPCWFlow02.fFlow
+      - | field: EGU L/MIN
+        | field: HOPR 300
+        | field: LOPR 0.0
+        | field: LSV MINOR
+        | io: input
+
+
+    * - $(PREFIX):PCW:TEMP01:TEMP_RBV
+      - ai
+      - MAIN.fbPCWTemp01.fTemperature
+      - | field: EGU C
+        | field: HOPR 1000
+        | field: LOPR 0.0
+        | field: LSV MINOR
+        | io: input
+
+
+    * - $(PREFIX):PCW:TEMP02:TEMP_RBV
+      - ai
+      - MAIN.fbPCWTemp02.fTemperature
+      - | field: EGU C
+        | field: HOPR 1000
+        | field: LOPR 0.0
+        | field: LSV MINOR
+        | io: input
+
+
+    * - $(PREFIX):PCW:TEMP03:TEMP_RBV
+      - ai
+      - MAIN.fbPCWTemp03.fTemperature
+      - | field: EGU C
+        | field: HOPR 1000
+        | field: LOPR 0.0
+        | field: LSV MINOR
+        | io: input
+
+
+    * - $(PREFIX):MON:TEMP01:TEMP_RBV
+      - ai
+      - MAIN.fbTempMon01.fTemperature
+      - | field: EGU C
+        | field: HOPR 1000
+        | field: LOPR 0.0
+        | field: LSV MINOR
+        | io: input
+
+
+    * - $(PREFIX):MON:TEMP02:TEMP_RBV
+      - ai
+      - MAIN.fbTempMon02.fTemperature
+      - | field: EGU C
+        | field: HOPR 1000
+        | field: LOPR 0.0
+        | field: LSV MINOR
+        | io: input
+
+
+    * - $(PREFIX):MON:TEMP03:TEMP_RBV
+      - ai
+      - MAIN.fbTempMon03.fTemperature
+      - | field: EGU C
+        | field: HOPR 1000
+        | field: LOPR 0.0
+        | field: LSV MINOR
+        | io: input
+
+
+    * - $(PREFIX):MON:TEMP04:TEMP_RBV
+      - ai
+      - MAIN.fbTempMon04.fTemperature
+      - | field: EGU C
+        | field: HOPR 1000
+        | field: LOPR 0.0
+        | field: LSV MINOR
+        | io: input
+
+
+
