@@ -1,0 +1,171 @@
+
+Settings
+--------
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Setting
+      - Value
+      - Description
+    * - AMS Net ID
+      - 172.21.69.80.1.1
+      -
+    * - Target IP address
+      - 172.21.69.80
+      - Based on AMS Net ID by convention
+    * - AMS Port
+      - 851
+      -
+
+.. _fms_cxi_plc_01_pragmas:
+
+Pragmas
+-------
+
+Total pragmas found: 36
+Total linter errors: 0
+
+
+
+Libraries
+---------
+
+.. csv-table::
+    :header: Library, Vendor, Default, Version
+    :align: center
+
+        Tc2_BABasic, Beckhoff Automation GmbH, Unset, Unset
+        Tc2_EtherCAT, Beckhoff Automation GmbH, Unset, Unset
+        Tc2_Standard, Beckhoff Automation GmbH, Unset, Unset
+        Tc2_System, Beckhoff Automation GmbH, Unset, Unset
+        Tc3_Module, Beckhoff Automation GmbH, Unset, Unset
+
+Symbols
+-------
+
+
+Constants
+^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        Constants.bFPUSupport, BOOL, 4107808 (8)
+        Constants.bLittleEndian, BOOL, 4107376 (8)
+        Constants.bSimulationMode, BOOL, 4107384 (8)
+        Constants.CompilerVersion, VERSION, 4107712 (64)
+        Constants.CompilerVersionNumeric, DWORD, 4107872 (32)
+        Constants.nPackMode, UINT, 4107792 (16)
+        Constants.nRegisterSize, WORD, 4107776 (16)
+        Constants.RuntimeVersion, VERSION, 4107648 (64)
+        Constants.RuntimeVersionNumeric, DWORD, 4107840 (32)
+
+
+Global_Version
+^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        Global_Version.stLibVersion_Tc2_BABasic, ST_LibVersion, 4096000 (288)
+        Global_Version.stLibVersion_Tc2_EtherCAT, ST_LibVersion, 4097824 (288)
+        Global_Version.stLibVersion_Tc2_Standard, ST_LibVersion, 4096288 (288)
+        Global_Version.stLibVersion_Tc2_System, ST_LibVersion, 4096576 (288)
+        Global_Version.stLibVersion_Tc2_Utilities, ST_LibVersion, 4097536 (288)
+        Global_Version.stLibVersion_Tc3_Module, ST_LibVersion, 4096864 (288)
+
+
+GVL_EL3174
+^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_EL3174.fRawLowerLimit, LREAL, 4107456 (64)
+        GVL_EL3174.fRawUpperLimit, LREAL, 4107392 (64)
+        GVL_EL3174.fScaleLowerLimit, LREAL, 4107584 (64)
+        GVL_EL3174.fScaleUpperLimit, LREAL, 4107520 (64)
+
+
+GVL_IO
+^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>16 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_IO.bLeak01, BOOL, 4097440 (8)
+        GVL_IO.bLeak02, BOOL, 4097448 (8)
+        GVL_IO.bLeak03, BOOL, 4097456 (8)
+        GVL_IO.bLeak04, BOOL, 4097464 (8)
+        GVL_IO.bLeak05, BOOL, 4107200 (8)
+        GVL_IO.bLeak06, BOOL, 4107208 (8)
+        GVL_IO.bLeak07, BOOL, 4107216 (8)
+        GVL_IO.nPCWFlowRaw01, INT, 4107344 (16)
+        GVL_IO.nPCWFlowRaw02, INT, 4107360 (16)
+        GVL_IO.nPCWTempRaw01, INT, 4107232 (16)
+        GVL_IO.nPCWTempRaw02, INT, 4107248 (16)
+        GVL_IO.nPCWTempRaw03, INT, 4107264 (16)
+        GVL_IO.nTempMonRaw01, INT, 4107280 (16)
+        GVL_IO.nTempMonRaw02, INT, 4107296 (16)
+        GVL_IO.nTempMonRaw03, INT, 4107312 (16)
+        GVL_IO.nTempMonRaw04, INT, 4107328 (16)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+MAIN
+^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        MAIN.fbPCWFlow01, FB_PCWFlow, 4105472 (192)
+        MAIN.fbPCWFlow02, FB_PCWFlow, 4105664 (192)
+        MAIN.fbPCWTemp01, FB_TemperatureMonitor, 4226432 (192)
+        MAIN.fbPCWTemp02, FB_TemperatureMonitor, 4226624 (192)
+        MAIN.fbPCWTemp03, FB_TemperatureMonitor, 4226816 (192)
+        MAIN.fbTempMon01, FB_TemperatureMonitor, 4225664 (192)
+        MAIN.fbTempMon02, FB_TemperatureMonitor, 4225856 (192)
+        MAIN.fbTempMon03, FB_TemperatureMonitor, 4226048 (192)
+        MAIN.fbTempMon04, FB_TemperatureMonitor, 4226240 (192)
+
+
+TwinCAT_LicenseInfoVarList
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        TwinCAT_LicenseInfoVarList._LicenseInfo, PlcLicenseInfo, 4107904 (1024)
+
+
+TwinCAT_SystemInfoVarList
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        TwinCAT_SystemInfoVarList.__PlcTask, _Implicit_Task_Info, 4112064 (896)
+        TwinCAT_SystemInfoVarList._AppInfo, PlcAppSystemInfo, 4108928 (2048)
+        TwinCAT_SystemInfoVarList._TaskInfo, PlcTaskSystemInfo, 4110976 (1024)
+        TwinCAT_SystemInfoVarList._TaskOid_PlcTask, OTCID, 4112032 (32)
+        TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask, OTCID, 4112000 (32)
+
+

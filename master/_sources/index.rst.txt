@@ -1,0 +1,30 @@
+lcls-plc-cxi-fms
+----------------
+
+.. toctree::
+    :maxdepth: 2
+    :caption: FMS_CXI_PLC
+
+    FMS_CXI_PLC_pragmas
+    FMS_CXI_PLC_nc
+    FMS_CXI_PLC_ethercat
+    FMS_CXI_PLC_boxes
+    FMS_CXI_PLC_links
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: fms_cxi_plc_01
+
+    FMS_CXI_PLC_fms_cxi_plc_01_summary
+    FMS_CXI_PLC_fms_cxi_plc_01_epics
+    FMS_CXI_PLC_fms_cxi_plc_01_source
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

@@ -1,0 +1,21 @@
+
+Pragmas
+-------
+
+.. csv-table::
+    :header: PLC Name, Total Pragmas, Errors
+    :align: center
+
+    :ref:`fms_cxi_plc_01 <fms_cxi_plc_01_overview_pragmas>`, 36, 0
+
+
+.. _fms_cxi_plc_01_overview_pragmas:
+
+
+fms_cxi_plc_01
+^^^^^^^^^^^^^^
+
+Total pragmas found: 36
+Total linter errors: 0
+
+
